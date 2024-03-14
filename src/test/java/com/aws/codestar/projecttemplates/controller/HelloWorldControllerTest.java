@@ -16,6 +16,7 @@ public class HelloWorldControllerTest {
 
     private static final String EXPECTED_SITE_NAME = "home";
     private static final String EXPECTED_VIEW_NAME = "index";
+    private static final String EXPECTED_RESPONSE_VALUE = "hello AWS codestar";
 
     private HelloWorldController helloWorldController = new HelloWorldController(EXPECTED_SITE_NAME);
 
@@ -50,5 +51,6 @@ public class HelloWorldControllerTest {
         // Verify the result obtained matches the values we expect.
         assertEquals(EXPECTED_VIEW_NAME, actualModelAndView.getViewName());
         assertEquals(EXPECTED_SITE_NAME, String.valueOf(actualModelAndView.getModel().get("siteName")));
+        assertEquals(EXPECT_RESPONSE_VALUE, actualModelAndView.getViewName());
     }
 }
